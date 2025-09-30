@@ -42,6 +42,27 @@ class Zombie:
         frame_height = self.image.h
         self.image.clip_draw(self.frame*frame_width,0,frame_width,frame_height, self.x, self.y, frame_width // 2, frame_height // 2)
 
+class BigBall:
+    def __init__(self):
+        pass
+
+    def update(self):
+        pass
+
+    def draw(self):
+        pass
+
+
+class SmallBall:
+    def __init__(self):
+        pass
+
+    def update(self):
+        pass
+
+    def draw(self):
+        pass
+
 def handle_events():
     global running
     events = get_events()
@@ -67,6 +88,12 @@ def reset_world():
 
     zombie = Zombie()
     world.append(zombie)
+
+    BigBalls = [BigBall() for _ in range(10)]
+    world += BigBalls
+
+    SmallBalls = [SmallBall() for _ in range(10)]
+    world += SmallBalls
 
 def update_world():
     for o in world:
