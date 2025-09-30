@@ -48,10 +48,12 @@ class BigBall:
         self.y = 599
         self.speed = random.randint(3, 7)
         self.image = load_image('ball41x41.png')
-        print(f'BigBall 생성완료')
 
     def update(self):
-        pass
+        self.y -= self.speed
+        if self.y <= 60 + 20:
+            self.y = 60 + 20
+            self.speed = 0
 
     def draw(self):
         self.image.draw(self.x, self.y)
@@ -63,10 +65,12 @@ class SmallBall:
         self.y = 599
         self.speed = random.randint(3, 7)
         self.image = load_image('ball21x21.png')
-        print(f'SmallBall 생성완료')
 
     def update(self):
-        pass
+        self.y -= self.speed
+        if self.y <= 60 + 10:
+            self.y = 60 + 10
+            self.speed = 0
 
     def draw(self):
         self.image.draw(self.x, self.y)
