@@ -54,7 +54,7 @@ class BigBall:
         pass
 
     def draw(self):
-        pass
+        self.image.draw(self.x, self.y)
 
 
 class SmallBall:
@@ -69,7 +69,7 @@ class SmallBall:
         pass
 
     def draw(self):
-        pass
+        self.image.draw(self.x, self.y)
 
 def handle_events():
     global running
