@@ -47,6 +47,7 @@ class BigBall:
         self.x = random.randint(100, 700)
         self.y = 599
         self.speed = random.randint(3, 7)
+        self.image = load_image('ball41x41.png')
         print(f'BigBall 생성완료')
 
     def update(self):
@@ -61,6 +62,7 @@ class SmallBall:
         self.x = random.randint(100, 700)
         self.y = 599
         self.speed = random.randint(3, 7)
+        self.image = load_image('ball21x21.png')
         print(f'SmallBall 생성완료')
 
     def update(self):
