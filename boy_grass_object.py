@@ -1,4 +1,3 @@
-#2024184023 이산하
 
 from pico2d import *
 import random
@@ -103,10 +102,12 @@ def reset_world():
     zombie = Zombie()
     world.append(zombie)
 
-    BigBalls = [BigBall() for _ in range(10)]
+    big_ball_count = random.randint(0, 20)
+
+    BigBalls = [BigBall() for _ in range(big_ball_count)]
     world += BigBalls
 
-    SmallBalls = [SmallBall() for _ in range(10)]
+    SmallBalls = [SmallBall() for _ in range(20 - big_ball_count)]
     world += SmallBalls
 
 def update_world():
