@@ -44,7 +44,10 @@ class Zombie:
 
 class BigBall:
     def __init__(self):
-        pass
+        self.x = random.randint(100, 700)
+        self.y = 599
+        self.speed = random.randint(3, 7)
+        print(f'BigBall 생성완료')
 
     def update(self):
         pass
@@ -55,7 +58,10 @@ class BigBall:
 
 class SmallBall:
     def __init__(self):
-        pass
+        self.x = random.randint(100, 700)
+        self.y = 599
+        self.speed = random.randint(3, 7)
+        print(f'SmallBall 생성완료')
 
     def update(self):
         pass
